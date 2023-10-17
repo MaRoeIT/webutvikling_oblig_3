@@ -1,7 +1,38 @@
+@import "partials/colors";
+@import "partials/mixin";
+
 body{
-    header{
-        div{
-            background-color: #F07A22;
+    main{
+        img{
+            @include default_image;
         }
     }
+}
+
+#grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+}
+
+#topp_bar_info{
+    display: flex;
+    justify-content: space-between;
+    background-color: $main_orange;
+    color: $default_white;
+    padding: 0 10px;
+    p{
+        font-size: 0.8rem;
+    }
+    i{
+        font-size: 1rem;
+        align-self: center;
+    }
+}
+
+#topp_move_left{
+
+}
+#topp_move_right{
+
 }

@@ -3,182 +3,203 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <link href="img/ikoner/fontawsome_ikoner/css/fontawesome.css" rel="stylesheet">
+        <link href="img/ikoner/fontawsome_ikoner/css/brands.css" rel="stylesheet">
+        <link href="img/ikoner/fontawsome_ikoner/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>My Sneaker Lab - skap din egen sko</title>
     </head>
     <body>
-        <header>
-            <!-- Div for pynt over resten av navigasjonen, gir kort info om levering og åpent kjøp -->
-            <div>
-                <img src="img/Ikoner/Transaction_ikon.jpg" alt="Ikon for åpent kjøp">
-                <p>
-                    30 dagers åpent kjøp
-                </p>
-                <img src="img/Ikoner/Lastebil_ikon.jpg" alt="Ikon lastebil, sending av varer">
-                <p>
-                    3-6 dagers levering
-                </p>
-            </div>
-            <!-- Navigasjons taggen for navigasjonsbaren på siden -->
-            <nav>
-                <!-- Logoen til nettsiden, skal føre tilbake til index.html -->
-                <a href="index.html">
-                    <img src="#" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
-                    <p>
-                        <span>MySneakerLab</span>
-                        skap din drømmesko 
+        <div id="grid_container">
+            <header>
+                <!-- Div for pynt over resten av navigasjonen, gir kort info om levering og åpent kjøp -->
+                <div id="topp_bar_info">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <p id="topp_move_left">
+                        30 dagers åpent kjøp
                     </p>
-                </a>
-                <!-- Ikon for søkebar, skal få opp en overlay som man kan søke i -->
-                <a href="#">
-                    <img src="#" alt="Forstørrelses glass">
-                </a>
-                <!-- ikon for handlevognen, skal bringe opp handlevogn siden, og oppdateres med tall ettervert så handlevognen får varer -->
-                <a href="#">
-                    <img src="#" alt="En handlevogn">
-                </a>
-                <!-- Hamburgermeny hovedmeny for mobil, skal få opp en overlay med valg på -->
-                <a href="#">
-                    <img src="#" alt="En hamburger meny knapp">
-                </a>
-            </nav>
-        </header>
-        <main>
-            <!-- Seksjon for promosjon og forklaring om hva siden handler om-->
+                    <i id="topp_move_right" class="fa-solid fa-truck"></i>
+                    <p>
+                        3-6 dagers levering
+                    </p>
+                </div>
+                <!-- Navigasjons taggen for navigasjonsbaren på siden -->
+                <nav>
+                    <!-- Logoen til nettsiden, skal føre tilbake til index.html -->
+                    <a href="index.html">
+                        <img src="#" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
+                        <p>
+                            <span>MySneakerLab</span>
+                            skap din drømmesko 
+                        </p>
+                    </a>
+                    <!-- Ikon for søkebar, skal få opp en overlay som man kan søke i -->
+                    <a href="#">
+                        <img src="#" alt="Forstørrelses glass">
+                    </a>
+                    <!-- ikon for handlevognen, skal bringe opp handlevogn siden, og oppdateres med tall ettervert så handlevognen får varer -->
+                    <a href="#">
+                        <img src="#" alt="En handlevogn">
+                    </a>
+                    <!-- Hamburgermeny hovedmeny for mobil, skal få opp en overlay med valg på -->
+                    <a href="#">
+                        <img src="#" alt="En hamburger meny knapp">
+                    </a>
+                </nav>
+            </header>
+            <main>
+                <!-- Seksjon for promosjon og forklaring om hva siden handler om-->
+                <section>
+                    <!-- promosjons bilde av nettsidens sko -->
+                    <a href="produktside.html">
+                        <img src="img/shoe_promotion.jpg" alt="En hvit og oransj sneaker som står på en oransj platform med en blå bakgrunn">
+                    </a>
+                    <h1>
+                        En sko design nettside
+                    </h1>
+                    <p>
+                        Tekst om kreativitet og å sette sitt eget preg på sine sko. og hvor enkelt det er å skape, i denne fantastiske sko skaperen.
+                    </p>
+                    <!-- En start å lag din sko link som skal gjennbrukes i flere sider på nettstedet -->
+                    <a href="#" class="lag_sko_btn">
+                        Start å lag din sko
+                    </a>
+                </section>
+                <section>
+                    <!-- link for å få opp seksjon om å skape sko -->
+                    <a href="#">
+                        <h2>
+                            hvordan skape din sko
+                        </h2>
+                    </a>
+                    <!-- link for å få opp seksjon med inspirasjon-->
+                    <a href="#">
+                        <h3>
+                            inspirasjon 
+                        </h3>
+                    </a>
+                </section>
+                <section>
+                    <!-- foreløpig seksjon om skape sko til jeg får til effekten over -->
+                    <!-- foreløpig representasjon av videoen -->
+                    <img src="img/shoe_walking.jpg" alt="To blå sko som noen har på seg mens de går mot høyre av bilde">
+                    <h2>
+                        Hvordan bruke sko skaperen
+                    </h2>
+                    <p>
+                        Tekst om sko skaperen og steg for steg hvordan du bruker den. i tilfelle noen ikke ønsker å se videoen.
+                    </p>
+                    <ol>
+                        <li>
+                            1. steg 1
+                        </li>
+                        <li>
+                            2. steg 2
+                        </li>
+                        <li>
+                            3. steg 3
+                        </li>
+                    </ol>
+                    <p>
+                        Nå har du en nydelig selvprodusert sko.
+                    </p>
+                </section>
+                <section>
+                    <!-- Denne seksjonen skal være hidden på mobil og synlig på desktop-->
+                    <img src="#" alt="flere inspirasjons sko">
+                    <h3>
+                        Inspirasjon
+                    </h3>
+                    <p>
+                        inspirasjons tekst som skal følge under bildene slik at folk blir inspirert til å lage sine egne sko. Sitater fra andre brukere om hvordan de bruker sin kreativitet osv.
+                    </p>
+                </section>
+            </main>
             <section>
-                <!-- promosjons bilde av nettsidens sko -->
-                <a href="produktside.html">
-                    <img src="img/shoe_promotion.jpg" alt="En hvit og oransj sneaker som står på en oransj platform med en blå bakgrunn">
-                </a>
-                <h1>
-                    En sko design nettside
-                </h1>
-                <p>
-                    Tekst om kreativitet og å sette sitt eget preg på sine sko. og hvor enkelt det er å skape, i denne fantastiske sko skaperen.
-                </p>
-                <!-- En start å lag din sko link som skal gjennbrukes i flere sider på nettstedet -->
-                <a href="#" class="lag_sko_btn">
-                    Start å lag din sko
-                </a>
-            </section>
-        </main>
-        <section>
-            <!-- link for å få opp seksjon om å skape sko -->
-            <a href="#">
-                <h2>
-                    hvordan skape din sko
-                </h2>
-            </a>
-            <!-- link for å få opp seksjon med inspirasjon-->
-            <a href="#">
+                <!-- tilbakemeldings karusell-->
                 <h3>
-                    inspirasjon 
+                    Hva sier kundene
                 </h3>
-            </a>
-            <!-- foreløpig seksjon om skape sko til jeg får til effekten over -->
-            <!-- foreløpig representasjon av videoen -->
-            <img src="img/shoe_walking.jpg" alt="To blå sko som noen har på seg mens de går mot høyre av bilde">
-            <p>
-                Tekst om sko skaperen og steg for steg hvordan du bruker den. i tilfelle noen ikke ønsker å se videoen.
-            </p>
-            <ol>
-                <li>
-                    1. steg 1
-                </li>
-                <li>
-                    2. steg 2
-                </li>
-                <li>
-                    3. steg 3
-                </li>
-            </ol>
-            <p>
-                Nå har du en nydelig selvprodusert sko.
-            </p>
-        </section>
-        <section>
-            <!-- tilbakemeldings karusell-->
-            <h3>
-                Hva sier kundene
-            </h3>
-            <!-- foreløpig til jeg finner ut hvordan å lage karusell -->
-            <p>
-                “Overaskende gode sko å gå i. Høy kvalitet og de kom fram akkurat slik jeg hadde designet de i sko skaperen”
-                <span>Kari. S</span>
-            </p>
-            <!-- skal være stjerner for hvor mange stjerner tilbakemelder har gitt -->
-            <img src="#" alt="fem stjerner">
-            <img src="#" alt="Runde ting som viser hvor i karusellen du er">
-        </section>
-        <section>
-            <h3>
-                populære sko
-            </h3>
-            <!-- her skal det være en sko karusell -->
-        </section>
-        <aside>
-            <!-- korte informasjons kort om leveranse betaling og åpent kjøp -->
-            <a href="#">
-                30 dagers åpent kjøp
-                <img src="#" alt="åpent kjøp ikon">
-            </a>
-            <a href="#">
-                leveres innen 3-6 dagers
-                <img src="#" alt="lastebil ikon">
-            </a>
-            <a href="#">
-                vips, klarna eller paypal
-                <img src="#" alt="ikon paypal logo">
-            </a>
-        </aside>
-        <footer>
-            <h3>
-                Hjelp
-            </h3>
-            <!-- Denne skal kunne åpnes og kolapses til mer info -->
-            <a href="#">
-                Levering og retur
-            </a>
-            <a href="#">
-                størrelses guide
-            </a>
-            <a href="#">
-                Skoskaperen guide
-            </a>
-            <!-- Denne skal kunne åpnes og kolapses til mer info -->
-            <a href="#">
-                Ofte stilte spørsmål
-            </a>
-            <!-- Denne skal kunne åpnes og kolapses til mer info -->
-            <a href="#">
-                Kontakt oss
-            </a>
-            <a href="#">
-                Om oss
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="tiktok">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="x">
-                    </a>
-                </li>
-            </ul>
-        </footer>
+                <!-- foreløpig til jeg finner ut hvordan å lage karusell -->
+                <p>
+                    “Overaskende gode sko å gå i. Høy kvalitet og de kom fram akkurat slik jeg hadde designet de i sko skaperen”
+                    <span>Kari. S</span>
+                </p>
+                <!-- skal være stjerner for hvor mange stjerner tilbakemelder har gitt -->
+                <img src="#" alt="fem stjerner">
+                <img src="#" alt="Runde ting som viser hvor i karusellen du er">
+            </section>
+            <section>
+                <h3>
+                    populære sko
+                </h3>
+                <!-- her skal det være en sko karusell -->
+            </section>
+            <aside>
+                <!-- korte informasjons kort om leveranse betaling og åpent kjøp -->
+                <a href="#">
+                    30 dagers åpent kjøp
+                    <img src="#" alt="åpent kjøp ikon">
+                </a>
+                <a href="#">
+                    leveres innen 3-6 dagers
+                    <img src="#" alt="lastebil ikon">
+                </a>
+                <a href="#">
+                    vips, klarna eller paypal
+                    <img src="#" alt="ikon paypal logo">
+                </a>
+            </aside>
+            <footer>
+                <h3>
+                    Hjelp
+                </h3>
+                <!-- Denne skal kunne åpnes og kolapses til mer info -->
+                <a href="#">
+                    Levering og retur
+                </a>
+                <a href="#">
+                    størrelses guide
+                </a>
+                <a href="#">
+                    Skoskaperen guide
+                </a>
+                <!-- Denne skal kunne åpnes og kolapses til mer info -->
+                <a href="#">
+                    Ofte stilte spørsmål
+                </a>
+                <!-- Denne skal kunne åpnes og kolapses til mer info -->
+                <a href="#">
+                    Kontakt oss
+                </a>
+                <a href="#">
+                    Om oss
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="#" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="#" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="#" alt="tiktok">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="#" alt="x">
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
     </body>
 </html>
 
