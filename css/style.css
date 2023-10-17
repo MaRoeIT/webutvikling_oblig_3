@@ -1,6 +1,29 @@
-body main img {
+html {
+  font-size: calc(1em + 1vw);
+}
+html body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html body header {
+  position: sticky;
+  top: 0px;
+}
+html body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0 1rem;
+  gap: 1.8rem;
+  background-color: #FFFFFF;
+}
+html body header nav a i {
+  size: 1rem;
+  color: #F07A22;
+}
+html body main img {
   width: 100%;
-  max-width: 600px;
+  max-width: 450px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -17,12 +40,24 @@ body main img {
   justify-content: space-between;
   background-color: #F07A22;
   color: #FFFFFF;
-  padding: 0 10px;
+  padding: 0 1.5rem;
 }
 #topp_bar_info p {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+  padding: 0 0.2rem;
 }
 #topp_bar_info i {
-  font-size: 1rem;
+  font-size: 0.8rem;
   align-self: center;
+}
+
+#logo {
+  height: 120px;
+}
+#logo img {
+  height: 100%;
+}
+
+.push_right {
+  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */
