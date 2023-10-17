@@ -1,37 +1,135 @@
 @import "partials/colors";
 @import "partials/mixin";
+$default_border: 1px solid $contrast_green;
 
 html{
     font-size: calc(1em + 1vw);
     body{
         font-family: Arial, Helvetica, sans-serif;
         header{
-                position: sticky;
-                top: 0px;  
-                nav{
-                    
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-size: 2rem;
-                    padding: 0 1rem;
-                    gap: 1.8rem;
-                    background-color: $default_white;
-                    a{
-                        i{
+            position: sticky;
+            top: 0px;  
+            nav{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 2rem;
+                padding: 0 1rem;
+                gap: 1.8rem;
+                background-color: $default_white;
+                border-bottom: 1px solid $main_orange;
+                a{
+                    i{
                             size: 1rem;
                             color: $main_orange;
-                        }
                     }
                 }
+            }
         }
         main{
+            section{
+                display: flex;
+                flex-direction: column;
+                border-bottom: $default_border;
+                h1{
+                    @include default_heading;
+                }
+                h2{
+                    @include default_heading;
+                }
+                p{
+                    @include default_text;
+                }
+                ol{
+                    padding: 0 20px;
+                    li{
+                        @include default_text;
+                        list-style: none;
+                    }
+                }
+            }
             img{
                 @include default_image;
             }
         }
+        section{
+            h3{
+                @include default_heading
+            }
+        }
+        aside{
+            display: grid;
+            grid-template-columns: 1fr 4fr 4fr 4fr 1fr;
+            padding: 20px 0;
+            #return{
+                display: flex;
+                flex-direction: column;
+                grid-column: 2/3;
+                border: $default_border;
+                @include default_text;
+                margin: 0;
+                i{
+                  font-size: 2rem;
+                }
+            }
+            #delivery{
+                display: flex;
+                flex-direction: column;
+                grid-column: 3/4;
+                border: $default_border;
+                @include default_text;
+                margin: 0;
+                i{
+                    font-size: 2rem;
+                }
+            }
+            #payment{
+                display: flex;
+                flex-direction: column;
+                grid-column: 4/5;
+                border: $default_border;
+                @include default_text;
+                margin: 0;
+                i{
+                    font-size: 2rem;
+                }
+            }
+        }
+        footer{
+            background-color: $contrast_green;
+            h3{
+                margin: 0;
+                padding: 10px 10px;
+                font-size: 1.7rem;
+                color: $main_orange;
+                font-weight: 600;
+            }
+            ol{
+                list-style: none;
+                padding: 0px 10px;
+                li{
+                    margin: 30px 0;
+                    a{
+                        color: $main_orange;
+                    }
+                }
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                li{
+                    margin: 0 20px;
+                    a{
+                        color: $main_orange;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
     }
 }
+
 #grid_container{
     display: grid;
     grid-template-columns: 1fr;
@@ -63,4 +161,53 @@ html{
 
 .push_right{
     margin-left: auto;
+}
+
+.default_btn{
+    @include default_button;
+}
+
+#choice_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: $default_border;
+    flex-direction: row;
+    h2{
+        font-size: 1rem;
+        font-weight: 600;
+        color: $light_orange;
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 600; 
+        color: $light_orange;
+    }
+}
+
+#inspirations{
+    display: none;
+}
+
+#customer_review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: $default_border; 
+    h3{
+        @include default_heading;
+        border-bottom: 1px solid $contrast_green;
+    }
+    p{
+        @include default_text;
+    }
+    div{
+        margin: 20px 0;
+        i{
+            color: $main_orange;
+            text-align: center;
+            font-size: 1.3rem;
+        }  
+    } 
 }
