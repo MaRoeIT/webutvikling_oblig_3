@@ -3,209 +3,226 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <link href="img/ikoner/fontawsome_ikoner/css/fontawesome.css" rel="stylesheet">
+        <link href="img/ikoner/fontawsome_ikoner/css/brands.css" rel="stylesheet">
+        <link href="img/ikoner/fontawsome_ikoner/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <title>My Sneaker Lab - Fly footsteps sneakers</title>
+        <title>My Sneaker Lab - skap din egen sko</title>
     </head>
     <body>
-        <header>
-            <!-- Div for pynt over resten av navigasjonen, gir kort info om levering og åpent kjøp -->
-            <div>
-                <img src="img/Ikoner/Transaction_ikon.jpg" alt="Ikon for åpent kjøp">
-                <p>
-                    30 dagers åpent kjøp
-                </p>
-                <img src="img/Ikoner/Lastebil_ikon.jpg" alt="Ikon lastebil, sending av varer">
-                <p>
-                    3-6 dagers levering
-                </p>
-            </div>
-            <!-- Navigasjons taggen for navigasjonsbaren på siden -->
-            <nav>
-                <!-- Logoen til nettsiden, skal føre tilbake til index.html -->
-                <a href="index.html">
-                    <img src="#" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
+        <div id="grid_container">
+            <header>
+                <!-- Div for pynt over resten av navigasjonen, gir kort info om levering og åpent kjøp -->
+                <div id="topp_bar_info">
+                    <i class="fa-solid fa-rotate-left"></i>
                     <p>
-                        <span>MySneakerLab</span>
-                        skap din drømmesko 
+                        30 dagers åpent kjøp
                     </p>
-                </a>
-                <!-- Ikon for søkebar, skal få opp en overlay som man kan søke i -->
-                <a href="#">
-                    <img src="#" alt="Forstørrelses glass">
-                </a>
-                <!-- ikon for handlevognen, skal bringe opp handlevogn siden, og oppdateres med tall ettervert så handlevognen får varer -->
-                <a href="#">
-                    <img src="#" alt="En handlevogn">
-                </a>
-                <!-- Hamburgermeny hovedmeny for mobil, skal få opp en overlay med valg på -->
-                <a href="#">
-                    <img src="#" alt="En hamburger meny knapp">
-                </a>
+                    <i class="fa-solid fa-truck push_right"></i>
+                    <p>
+                        3-6 dagers levering
+                    </p>
+                </div>
+                <!-- Navigasjons taggen for navigasjonsbaren på siden -->
+                <nav>
+                    <!-- Logoen til nettsiden, skal føre tilbake til index.html -->
+                    <a href="index.html" id="logo">
+                        <img src="img/logo.jpg" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
+                    </a>
+                    <!-- Ikon for søkebar, skal få opp en overlay som man kan søke i -->
+                    <a href="#" class="push_right">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <!-- ikon for handlevognen, skal bringe opp handlevogn siden, og oppdateres med tall ettervert så handlevognen får varer -->
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <!-- Hamburgermeny hovedmeny for mobil, skal få opp en overlay med valg på -->
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </nav>
+            </header>
+            <nav class="breadcrumb_trail">
+                <ol>
+                    <li>
+                        <a href="index.html">
+                            Hjem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Damesko
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Sneaker
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Fly Footstep
+                        </a>
+                    </li>
+                </ol>
             </nav>
-        </header>
-        <nav class="breadcrumb_trail">
-            <ol>
-                <li>
-                    <a href="index.html">
-                        Hjem
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Damesko
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Sneaker
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Fly Footstep
-                    </a>
-                </li>
-            </ol>
-        </nav>
-        <main>
+            <main>
+                <section>
+                    <!-- ordne en bildekarusell av produktet -->
+                    <img src="#" alt="Bildekarusell av skoen fly footstep sneaker">
+                    <h1>
+                        Fly Footstep Sneaker
+                    </h1>
+                    <div id="produktinfo_grid">
+                        <a href="#" class="lag_sko_btn">
+                            Start å lag din sko
+                        </a>
+                        <!-- taggene til produktet -->
+                        <ul>
+                            <li>
+                                Tagg
+                            </li>
+                            <li>
+                                Tagg
+                            </li>
+                            <li>
+                                Tagg
+                            </li>
+                        </ul>
+                        <!-- dette blir hele størrelses seksjonen -->
+                        <section id="size_grid">
+                            <h2>
+                                Størrelser
+                            </h2>
+                            <ol>
+                                <li>
+                                    36
+                                </li>
+                                <li>
+                                    37
+                                </li>
+                                <li>
+                                    38
+                                </li>
+                                <li>
+                                    39
+                                </li>
+                                <li>
+                                    40
+                                </li>
+                                <li>
+                                    41
+                                </li>
+                                <li>
+                                    42
+                                </li>
+                                <li>
+                                    43
+                                </li>
+                                <li>
+                                    44
+                                </li>
+                            </ol>
+                        </section>
+                        <aside>
+                            <img src="#" alt="Stjerner">
+                            <p>
+                                5,0 <span>(23)</span>
+                            </p>
+                        </aside>
+                    </div>              
+                </section>
+                <section>
+                    <h3>
+                        produktspesifikasjoner
+                    </h3>
+                </section>
+            </main>
             <section>
-                <!-- ordne en bildekarusell av produktet -->
-                <img src="#" alt="Bildekarusell av skoen fly footstep sneaker">
-                <h1>
-                    Fly Footstep Sneaker
-                </h1>
-                <div id="produktinfo_grid">
-                    <a href="#" class="lag_sko_btn">
-                        Start å lag din sko
-                    </a>
-                    <!-- taggene til produktet -->
-                    <ul>
-                        <li>
-                            Tagg
-                        </li>
-                        <li>
-                            Tagg
-                        </li>
-                        <li>
-                            Tagg
-                        </li>
-                    </ul>
-                    <!-- dette blir hele størrelses seksjonen -->
-                    <section id="size_grid">
-                        <h2>
-                            Størrelser
-                        </h2>
-                        <ol>
-                            <li>
-                                36
-                            </li>
-                            <li>
-                                37
-                            </li>
-                            <li>
-                                38
-                            </li>
-                            <li>
-                                39
-                            </li>
-                            <li>
-                                40
-                            </li>
-                            <li>
-                                41
-                            </li>
-                            <li>
-                                42
-                            </li>
-                            <li>
-                                43
-                            </li>
-                            <li>
-                                44
-                            </li>
-                        </ol>
-                    </section>
-                    <aside>
-                        <img src="#" alt="Stjerner">
-                        <p>
-                            5,0 <span>(23)</span>
-                        </p>
-                    </aside>
-                </div>              
+                <h2>
+                    Fly Footstep sneakers
+                </h2>
+                <p>
+                    Fra 690 kr
+                </p>
+                <a href="#size_grid">
+                    Størrelser
+                </a>
+                <a href="#" class="lag_sko_btn">
+                    Start å lag din sko
+                </a>
             </section>
-            <section>
+            <aside>
                 <h3>
-                    produktspesifikasjoner
+                    inspirasjon fra andre brukere
                 </h3>
-            </section>
-        </main>
-        <section>
-            <h2>
-                Fly Footstep sneakers
-            </h2>
-            <p>
-                Fra 690 kr
-            </p>
-            <a href="#size_grid">
-                Størrelser
-            </a>
-            <a href="#" class="lag_sko_btn">
-                Start å lag din sko
-            </a>
-        </section>
-        <aside>
-            <h3>
-                inspirasjon fra andre brukere
-            </h3>
-            <img src="#" alt="bildekarusell med sko">
-        </aside>
-        <footer>
-            <h3>
-                Hjelp
-            </h3>
-            <!-- Denne skal kunne åpnes og kolapses til mer info -->
-            <a href="#">
-                Levering og retur
-            </a>
-            <a href="#">
-                størrelses guide
-            </a>
-            <a href="#">
-                Skoskaperen guide
-            </a>
-            <!-- Denne skal kunne åpnes og kolapses til mer info -->
-            <a href="#">
-                Ofte stilte spørsmål
-            </a>
-            <!-- Denne skal kunne åpnes og kolapses til mer info -->
-            <a href="#">
-                Kontakt oss
-            </a>
-            <a href="#">
-                Om oss
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="tiktok">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="#" alt="x">
-                    </a>
-                </li>
-            </ul>
-        </footer>
+                <img src="#" alt="bildekarusell med sko">
+            </aside>
+            <footer>
+                <h3>
+                    Hjelp
+                </h3>
+                <ol>
+                    <li>
+                        <!-- Denne skal kunne åpnes og kolapses til mer info -->
+                        <a href="#">
+                            Levering og retur
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            størrelses guide
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Skoskaperen guide
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Denne skal kunne åpnes og kolapses til mer info -->
+                        <a href="#">
+                            Ofte stilte spørsmål
+                        </a> 
+                    </li>
+                    <li>
+                        <!-- Denne skal kunne åpnes og kolapses til mer info -->
+                        <a href="#">
+                            Kontakt oss
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#">
+                            Om oss
+                        </a> 
+                    </li>
+                </ol>
+                
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
     </body>
 </html>
