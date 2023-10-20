@@ -98,6 +98,11 @@ html{
                 }
             }
         }
+        aside{
+            h3{
+                @include default_heading;
+            }
+        }
         footer{
             background-color: $contrast_green;
             h3{
@@ -262,10 +267,7 @@ html{
         border-bottom: none;
         h2{
             border: $default_border;
-            margin: 1.5rem 0 0 0;
-        }
-        h3{
-            margin: 0;
+            margin: 1.5rem 10px 0 10px;
         }
         ol{
             display: grid;
@@ -289,7 +291,93 @@ html{
                 font-size: 0.7rem;
                 align-self: center;
                 color: $main_orange;    
+            }
+            p{
+                position: relative;
+                span{
+                    position: absolute;
+                    font-size: 0.7rem;
+                    top: 0px;
+                    margin: 0 5px;
+                }
             }  
         }
     }
+}
+
+#product_info_bar{
+    display: grid;
+    grid-template-areas: "header header" "price ." "size btn";
+    position: sticky;
+    bottom: 0px;
+    background-color: $contrast_green;
+    border-top: 1px solid $main_orange;
+    border-bottom: 1px solid $main_orange;
+    h2{
+        grid-area: header;
+        @include default_heading;
+    }
+    p{
+        grid-area: price;
+        @include default_text;
+        text-align: left;
+        margin: 10px;
+    }
+    a{
+        grid-area: size;
+        margin-left: 10px;
+    }
+    .default_btn{
+        grid-area: btn;
+        margin-bottom: 10px;
+    }
+}
+
+#produktspesifikasjon_info{
+    display: none;
+    ol{
+        li{
+            text-align: left;
+            list-style: disc;
+        }
+    }
+    p{
+        text-align: left;
+    }
+    ul{
+        li{
+            text-align: left;
+            font-size: 1rem;
+            color: $main_orange; 
+        }  
+    }
+    h5{
+        font-weight: 600;
+        color: $main_orange;
+        margin: 20px 15px 0 15px;
+        font-size: 1rem;
+    }
+    span{
+        font-weight: 600;
+        padding: 0 5px 0 0;
+    }
+}
+
+#retur_main{
+    section{
+        border: none;
+        margin: 10px;
+        h1{
+            margin-bottom: 20px;
+            border: $default_border;
+        }
+        h2{
+            margin-bottom: 20px;
+            border: $default_border;
+        }
+    }
+}
+
+.hidden_mobile{
+    display: none;
 }

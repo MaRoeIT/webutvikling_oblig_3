@@ -121,6 +121,13 @@ html body #aside_info #payment {
 html body #aside_info #payment i {
   font-size: 2rem;
 }
+html body aside h3 {
+  font-size: 1.7rem;
+  text-align: center;
+  color: #F07A22;
+  font-weight: 600;
+  margin: 0 10px;
+}
 html body footer {
   background-color: #005F27;
 }
@@ -306,10 +313,7 @@ html body footer ul li a {
 }
 #produktinfo_grid section h2 {
   border: 1px solid #005F27;
-  margin: 1.5rem 0 0 0;
-}
-#produktinfo_grid section h3 {
-  margin: 0;
+  margin: 1.5rem 10px 0 10px;
 }
 #produktinfo_grid section ol {
   display: grid;
@@ -333,4 +337,91 @@ html body footer ul li a {
   font-size: 0.7rem;
   align-self: center;
   color: #F07A22;
+}
+#produktinfo_grid section aside p {
+  position: relative;
+}
+#produktinfo_grid section aside p span {
+  position: absolute;
+  font-size: 0.7rem;
+  top: 0px;
+  margin: 0 5px;
+}
+
+#product_info_bar {
+  display: grid;
+  grid-template-areas: "header header" "price ." "size btn";
+  position: sticky;
+  bottom: 0px;
+  background-color: #005F27;
+  border-top: 1px solid #F07A22;
+  border-bottom: 1px solid #F07A22;
+}
+#product_info_bar h2 {
+  grid-area: header;
+  font-size: 1.7rem;
+  text-align: center;
+  color: #F07A22;
+  font-weight: 600;
+  margin: 0 10px;
+}
+#product_info_bar p {
+  grid-area: price;
+  font-size: 1rem;
+  text-align: center;
+  color: #FF9340;
+  margin: 0 15px;
+  text-align: left;
+  margin: 10px;
+}
+#product_info_bar a {
+  grid-area: size;
+  margin-left: 10px;
+}
+#product_info_bar .default_btn {
+  grid-area: btn;
+  margin-bottom: 10px;
+}
+
+#produktspesifikasjon_info {
+  display: none;
+}
+#produktspesifikasjon_info ol li {
+  text-align: left;
+  list-style: disc;
+}
+#produktspesifikasjon_info p {
+  text-align: left;
+}
+#produktspesifikasjon_info ul li {
+  text-align: left;
+  font-size: 1rem;
+  color: #F07A22;
+}
+#produktspesifikasjon_info h5 {
+  font-weight: 600;
+  color: #F07A22;
+  margin: 20px 15px 0 15px;
+  font-size: 1rem;
+}
+#produktspesifikasjon_info span {
+  font-weight: 600;
+  padding: 0 5px 0 0;
+}
+
+#retur_main section {
+  border: none;
+  margin: 10px;
+}
+#retur_main section h1 {
+  margin-bottom: 20px;
+  border: 1px solid #005F27;
+}
+#retur_main section h2 {
+  margin-bottom: 20px;
+  border: 1px solid #005F27;
+}
+
+.hidden_mobile {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
