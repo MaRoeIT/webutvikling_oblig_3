@@ -230,13 +230,13 @@ html body footer ul li a {
   display: none;
 }
 
-#customer_review {
+.customer_review {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #005F27;
 }
-#customer_review h3 {
+.customer_review h3 {
   font-size: 1.7rem;
   text-align: center;
   color: #F07A22;
@@ -244,16 +244,16 @@ html body footer ul li a {
   margin: 0 10px;
   border-bottom: 1px solid #005F27;
 }
-#customer_review p {
+.customer_review p {
   font-size: 1rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
 }
-#customer_review div {
+.customer_review div {
   margin: 20px 0;
 }
-#customer_review div i {
+.customer_review div i {
   color: #F07A22;
   text-align: center;
   font-size: 1.3rem;
