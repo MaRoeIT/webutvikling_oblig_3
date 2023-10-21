@@ -1,6 +1,3 @@
-html {
-  font-size: calc(1em + 1vw);
-}
 html body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -424,4 +421,265 @@ html body footer ul li a {
 
 .hidden_mobile {
   display: none;
+}
+
+@media only screen and (min-width: 1280px) {
+  #grid_container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }
+  .hidden_mobile {
+    display: block;
+  }
+  .hidden_desktop {
+    display: none;
+  }
+  header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  #main_nav {
+    display: grid;
+    grid-template-areas: ". . form search cart user" "logo list list list list list";
+    grid-template-columns: 3fr 3fr 8fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+  }
+  #main_nav #logo {
+    grid-area: logo;
+  }
+  #main_nav form {
+    grid-area: form;
+    margin-top: 20px;
+  }
+  #main_nav form input {
+    border-radius: 40px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #005F27;
+  }
+  #main_nav #search_icon {
+    grid-area: search;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  #main_nav #search_icon i {
+    font-size: 3.2rem;
+  }
+  #main_nav #cart_icon {
+    grid-area: cart;
+    margin-top: 20px;
+  }
+  #main_nav #cart_icon i {
+    font-size: 3.2rem;
+  }
+  #main_nav #user_icon {
+    grid-area: user;
+    margin-top: 20px;
+  }
+  #main_nav #user_icon i {
+    border: 2px solid #F07A22;
+    border-radius: 100px;
+    padding: 10px;
+  }
+  #main_nav ul {
+    grid-area: list;
+    align-self: end;
+    margin: 0;
+    padding: 0;
+  }
+  #main_nav ul li {
+    display: inline-block;
+    margin: 0 30px;
+  }
+  #main_nav ul li a {
+    color: #F07A22;
+  }
+  #topp_bar_info p, #topp_bar_info i {
+    font-size: 1rem;
+  }
+  html body main {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  html body main section {
+    border: 1px solid #005F27;
+    margin: 10px;
+  }
+  html body main section a {
+    margin-bottom: 10px;
+  }
+  html body main section a picture img {
+    max-height: 544px;
+    max-width: 960px;
+  }
+  html body main section h1 {
+    margin: 10px;
+  }
+  html body main section p {
+    margin: 15px;
+  }
+  html body main section .default_btn {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 2rem;
+  }
+  html body main #promotion {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  html body main #choice_btn {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    border: none;
+    justify-content: space-around;
+  }
+  html body main #choice_btn a {
+    display: flex;
+  }
+  html body main #choice_btn a h2, html body main #choice_btn a h3 {
+    font-size: 1.7rem;
+  }
+  html body main #how_to {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  html body main #inspirations {
+    display: block;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  html body #aside_info {
+    grid-column: 1/4;
+    grid-row: 5/6;
+    grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
+  }
+  html body #aside_info #delivery, html body #aside_info #return, html body #aside_info #payment {
+    font-size: 1.6rem;
+    padding: 2em 1.5em;
+  }
+  html body #aside_info #delivery i, html body #aside_info #return i, html body #aside_info #payment i {
+    font-size: 4rem;
+  }
+  html body footer {
+    grid-column: 1/4;
+    grid-row: 6/7;
+    display: grid;
+    grid-template-areas: "footer_logo shoe_creator help about" ". questions . contact" ". . . social_media";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  html body footer section h4 {
+    text-align: center;
+    color: #F07A22;
+    font-weight: 800;
+  }
+  html body footer section ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    text-align: center;
+    margin: 16px 0 0 0;
+  }
+  html body footer section ul li {
+    font-size: 1rem;
+    text-align: center;
+    color: #FF9340;
+    margin: 0 15px;
+  }
+  html body footer section a {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    text-align: center;
+    color: #FF9340;
+    margin: 0 15px;
+  }
+  html body footer #footer_how_to {
+    grid-area: shoe_creator;
+  }
+  html body footer #footer_questions {
+    grid-area: questions;
+  }
+  html body footer #footer_help {
+    grid-area: help;
+  }
+  html body footer #footer_about {
+    grid-area: about;
+  }
+  html body footer #footer_contact {
+    grid-area: contact;
+  }
+  html body footer #footer_logo {
+    grid-area: footer_logo;
+  }
+  html body footer #footer_logo img {
+    width: 11em;
+    height: 100%;
+  }
+  html body footer ul {
+    grid-area: social_media;
+    margin-top: 40px;
+  }
+  #main_review {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  #left_review {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #right_review {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  #popular_shoes {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+  .customer_review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #005F27;
+    margin: 20px 0;
+  }
+  .customer_review h3 {
+    margin-bottom: 40px;
+  }
+  .customer_review p {
+    font-size: 1rem;
+    text-align: center;
+    color: #FF9340;
+    margin: 0 15px;
+  }
+  .customer_review div {
+    margin: 0;
+    margin-top: auto;
+  }
+  .customer_review div i {
+    color: #F07A22;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  #left_review p, #right_review p {
+    margin-top: 72px;
+  }
+  #left_review p span, #right_review p span {
+    font-weight: 600;
+  }
+  #left_review img, #right_review img {
+    margin-top: 15px;
+  }
+  #main_review div {
+    margin-top: 38px;
+  }
+  #main_review p span {
+    font-weight: 600;
+  }
+  #main_review img {
+    margin-top: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
