@@ -98,7 +98,10 @@
             <main id="product_main">
                 <section id="product_grid">
                     <div id="img_carousel">
-                        <img src="img/shoe_01_1.jpg" alt="Bildekarusell av skoen fly footstep sneaker" id="product_img_main">
+                        <picture id="product_img_main">
+                            <source media="(min-width: 1000px)" srcset="img/shoe_01_1.jpg">
+                            <img src="img/shoe_01_1_square.jpg" alt="Bildekarusell av skoen fly footstep sneaker">
+                        </picture>
                         <img src="img/shoe_01_2.jpg" alt="" id="product_img_left" class="hidden_mobile">
                         <img src="img/shoe_01_3.jpg" alt="" id="product_img_center" class="hidden_mobile">
                         <img src="img/shoe_01_1.jpg" alt="" id="product_img_right" class="hidden_mobile">
@@ -112,7 +115,7 @@
                             Start å lag din sko
                         </a>
                         <!-- taggene til produktet -->
-                        <p>Fra 690 kr</p>
+                        <p class="hidden_mobile">Fra 690 kr</p>
                         <ul>
                             <li>
                                 Tagg
@@ -309,7 +312,7 @@
                     </ul>
                 </section>
                 <a href="index.html" class="hidden_mobile" id="footer_logo">
-                    <img src="img/logo.jpg" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
+                    <img src="img/logo_green.jpg" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
                 </a>
                 <ul>
                     <li>
