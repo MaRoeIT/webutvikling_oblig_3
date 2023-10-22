@@ -39,7 +39,7 @@ html body main section h2 {
   margin: 0 10px;
 }
 html body main section p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -48,7 +48,7 @@ html body main section ol {
   padding: 0 20px;
 }
 html body main section ol li {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -78,7 +78,7 @@ html body #aside_info #return {
   flex-direction: column;
   grid-column: 2/3;
   border: 1px solid #005F27;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -93,7 +93,7 @@ html body #aside_info #delivery {
   flex-direction: column;
   grid-column: 3/4;
   border: 1px solid #005F27;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -108,7 +108,7 @@ html body #aside_info #payment {
   flex-direction: column;
   grid-column: 4/5;
   border: 1px solid #005F27;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -242,7 +242,7 @@ html body footer ul li a {
   border-bottom: 1px solid #005F27;
 }
 .customer_review p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -364,7 +364,7 @@ html body footer ul li a {
 }
 #product_info_bar p {
   grid-area: price;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #FF9340;
   margin: 0 15px;
@@ -584,7 +584,7 @@ html body footer ul li a {
     margin: 16px 0 0 0;
   }
   html body footer section ul li {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     color: #FF9340;
     margin: 0 15px;
@@ -592,7 +592,7 @@ html body footer ul li a {
   html body footer section a {
     display: block;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     color: #FF9340;
     margin: 0 15px;
@@ -650,7 +650,7 @@ html body footer ul li a {
     margin-bottom: 40px;
   }
   .customer_review p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     color: #FF9340;
     margin: 0 15px;
@@ -681,5 +681,66 @@ html body footer ul li a {
   }
   #main_review img {
     margin-top: 15px;
+  }
+  .breadcrumb_trail {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  #product_main {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+  }
+  #product_main #img_carousel {
+    display: grid;
+    grid-template-areas: "main_img main_img main_img" "preview_left preview_center preview_right";
+  }
+  #product_main #img_carousel #product_img_main {
+    grid-area: main_img;
+  }
+  #product_main #img_carousel #product_img_left {
+    grid-area: preview_left;
+    width: 80px;
+  }
+  #product_main #img_carousel #product_img_center {
+    grid-area: preview_center;
+    width: 80px;
+  }
+  #product_main #img_carousel #product_img_right {
+    grid-area: preview_right;
+    width: 80px;
+  }
+  #product_main #product_grid {
+    display: grid;
+    grid-template-areas: "product_name product_name" "product_img product_info";
+  }
+  #product_main #product_grid h1 {
+    grid-area: product_name;
+  }
+  #product_main #product_grid #img_carousel {
+    grid-area: product_img;
+  }
+  #product_main #product_grid #produktinfo_grid {
+    grid-area: product_info;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  #product_main #product_grid #produktinfo_grid a {
+    grid-row: 3/4;
+  }
+  #product_main #product_grid #produktinfo_grid ul {
+    grid-row: 1/2;
+  }
+  #product_main #product_grid #produktinfo_grid #size_grid {
+    grid-row: 2/3;
+  }
+  #saved_designs {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+  #product_info_bar {
+    grid-column: 1/4;
+    grid-row: 5/6;
   }
 }/*# sourceMappingURL=style.css.map */
