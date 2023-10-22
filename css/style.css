@@ -380,9 +380,6 @@ html body footer ul li a {
   margin-bottom: 10px;
 }
 
-#produktspesifikasjon_info {
-  display: none;
-}
 #produktspesifikasjon_info ol li {
   text-align: left;
   list-style: disc;
@@ -686,6 +683,9 @@ html body footer ul li a {
     grid-column: 1/4;
     grid-row: 2/3;
   }
+  .breadcrumb_trail ol li a {
+    font-size: 1.2rem;
+  }
   #product_main {
     grid-column: 1/4;
     grid-row: 3/4;
@@ -698,25 +698,28 @@ html body footer ul li a {
   }
   #product_main #img_carousel #product_img_main {
     grid-area: main_img;
+    max-width: 780px;
   }
   #product_main #img_carousel #product_img_left {
     grid-area: preview_left;
-    width: 80px;
+    width: 180px;
   }
   #product_main #img_carousel #product_img_center {
     grid-area: preview_center;
-    width: 80px;
+    width: 180px;
   }
   #product_main #img_carousel #product_img_right {
     grid-area: preview_right;
-    width: 80px;
+    width: 180px;
   }
   #product_main #product_grid {
     display: grid;
-    grid-template-areas: "product_name product_name" "product_img product_info";
+    grid-template-areas: ". product_name" "product_img product_info";
+    gap: 0;
   }
   #product_main #product_grid h1 {
     grid-area: product_name;
+    justify-self: left;
   }
   #product_main #product_grid #img_carousel {
     grid-area: product_img;
@@ -724,16 +727,36 @@ html body footer ul li a {
   #product_main #product_grid #produktinfo_grid {
     grid-area: product_info;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    justify-items: left;
+    gap: 10px;
   }
   #product_main #product_grid #produktinfo_grid a {
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin: 20px 0;
   }
-  #product_main #product_grid #produktinfo_grid ul {
+  #product_main #product_grid #produktinfo_grid p {
     grid-row: 1/2;
   }
-  #product_main #product_grid #produktinfo_grid #size_grid {
+  #product_main #product_grid #produktinfo_grid ul {
+    grid-column: 1/2;
     grid-row: 2/3;
+    gap: 25px;
+  }
+  #product_main #product_grid #produktinfo_grid #size_grid {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: none;
+  }
+  #product_main #product_grid #produktinfo_grid #size_grid h2 {
+    font-size: 2.2rem;
+  }
+  #product_main #product_grid #produktinfo_grid #size_grid ol {
+    grid-template-areas: "s36 s37 s38 s39 s40" "s41 s42 s43 s44 .";
+  }
+  #product_main #product_grid #produktinfo_grid #size_grid ol li {
+    font-size: 2rem;
   }
   #saved_designs {
     grid-column: 1/4;
@@ -742,5 +765,54 @@ html body footer ul li a {
   #product_info_bar {
     grid-column: 1/4;
     grid-row: 5/6;
+  }
+  #saved_designs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 2fr 2fr;
+    justify-items: center;
+    margin: 20px;
+    gap: 40px;
+  }
+  #saved_designs a {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    color: #F07A22;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #F07A22;
+    font-weight: 600;
+    margin: 0 10px;
+  }
+  #saved_designs article {
+    background-color: gray;
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+    background-image: url(../img/shoe_04.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  #saved_designs article p {
+    font-weight: 800;
+    color: #005F27;
+  }
+  #product_info_bar {
+    grid-template-areas: "header ." "price ." "size btn";
+  }
+  #product_info_bar .default_btn {
+    font-size: 2rem;
+    justify-self: center;
+    color: white;
+  }
+  #product_info_bar a {
+    justify-self: left;
+    align-self: center;
+    font-size: 1.5rem;
+    color: #F07A22;
+  }
+  #retur_main {
+    grid-row: 3/4;
+    align-items: baseline;
   }
 }/*# sourceMappingURL=style.css.map */
