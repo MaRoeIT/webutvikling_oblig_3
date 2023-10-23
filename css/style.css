@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -68,7 +69,7 @@ html body main img {
   margin-left: auto;
   margin-right: auto;
 }
-html body section h3 {
+html body section h3, html body aside h3 {
   font-size: 1.7rem;
   text-align: center;
   color: #F07A22;
@@ -124,13 +125,6 @@ html body #aside_info #payment {
 }
 html body #aside_info #payment i {
   font-size: 2rem;
-}
-html body aside h3 {
-  font-size: 1.7rem;
-  text-align: center;
-  color: #F07A22;
-  font-weight: 600;
-  margin: 0 10px;
 }
 html body footer {
   background-color: #005F27;
@@ -228,10 +222,6 @@ html body footer ul li a {
   font-size: 1.5rem;
   font-weight: 600;
   color: #FF9340;
-}
-
-#inspirations {
-  display: none;
 }
 
 .customer_review {
@@ -459,6 +449,8 @@ html body footer ul li a {
   padding: 7px;
 }
 
+/* Breakpoint for desktop. har valgt 1000px da siden begynner å se rar ut på dette tidspunktet og man begynner å nærme seg veldig vanlige desktop størrelser
+    Ville lagt til en mellom break point vis jeg skulle jobbet videre med siden, for å gi en bedre opplevelse til tablet brukere*/
 @media only screen and (min-width: 1000px) {
   #grid_container {
     grid-template-columns: repeat(3, 1fr);
@@ -664,6 +656,15 @@ html body footer ul li a {
     grid-column: 2/3;
     grid-row: 3/4;
   }
+  #main_review div {
+    margin-top: 38px;
+  }
+  #main_review p span {
+    font-weight: 600;
+  }
+  #main_review img {
+    margin-top: 15px;
+  }
   #left_review {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -708,15 +709,6 @@ html body footer ul li a {
     font-weight: 600;
   }
   #left_review img, #right_review img {
-    margin-top: 15px;
-  }
-  #main_review div {
-    margin-top: 38px;
-  }
-  #main_review p span {
-    font-weight: 600;
-  }
-  #main_review img {
     margin-top: 15px;
   }
   .breadcrumb_trail {
@@ -816,12 +808,6 @@ html body footer ul li a {
   #saved_designs {
     grid-column: 1/4;
     grid-row: 4/5;
-  }
-  #product_info_bar {
-    grid-column: 1/4;
-    grid-row: 5/6;
-  }
-  #saved_designs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.1fr 2fr 2fr;
@@ -853,6 +839,8 @@ html body footer ul li a {
     color: #005F27;
   }
   #product_info_bar {
+    grid-column: 1/4;
+    grid-row: 5/6;
     grid-template-areas: "header ." "price ." "size btn";
   }
   #product_info_bar .default_btn {

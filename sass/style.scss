@@ -6,6 +6,7 @@ html{
     body{
         font-family: Arial, Helvetica, sans-serif;
         header{
+            // Passer på at navigasjons baren følger brukeren på siden
             position: sticky;
             top: 0px;  
             nav{
@@ -27,6 +28,7 @@ html{
             }
         }
         main{
+            // Generell styling til alle seksjonene i main for å få dem alle til å ligge vertikalt og ha en ramme 
             section{
                 display: flex;
                 flex-direction: column;
@@ -48,20 +50,24 @@ html{
                     }
                 }
             }
+            // Henter spesifikt deafault btn i promotion seksjonen så ikke alle med klassen blir endret på
             #promotion{
                 .default_btn{
                     margin-bottom: 10px;
                 }
             }
+            // Setter en generell stil for alle bildene i main
             img{
                 @include default_image;
             }
         }
-        section{
+        // Setter en generell stil på alle h3 elementene i seksjonene på siden
+        section, aside{
             h3{
                 @include default_heading
             }
         }
+        // Setter stil til info boxene på forsiden
         #aside_info{
             display: grid;
             grid-template-columns: 1fr 4fr 4fr 4fr 1fr;
@@ -103,11 +109,6 @@ html{
                 }
             }
         }
-        aside{
-            h3{
-                @include default_heading;
-            }
-        }
         footer{
             background-color: $contrast_green;
             h3{
@@ -143,12 +144,14 @@ html{
     }
 }
 
+// Griden for hovedelementene på siden som main header og footer
 #grid_container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
 }
 
+// Baren helt i toppen av siden
 #topp_bar_info{
     display: flex;
     justify-content: space-between;
@@ -165,6 +168,7 @@ html{
     }
 }
 
+// Styling av logoen
 #logo{
     height: 120px;
     img{
@@ -172,14 +176,17 @@ html{
     }
 }
 
+// Klasse som dytter elementet til høyre inne i foreldre elementet sitt med bruk av margin
 .push_right{
     margin-left: auto;
 }
 
+// Setter stilart til linkene som skal se ut som knapper
 .default_btn{
     @include default_button;
 }
 
+// Stilsetter det som skal bli valg knappene for å velge seksjonen du vil se
 #choice_btn{
     display: flex;
     justify-content: center;
@@ -199,10 +206,7 @@ html{
     }
 }
 
-#inspirations{
-    display: none;
-}
-
+// Stilsetter tilbakemeldinger fra kunder seksjonen på forsiden
 .customer_review{
     display: flex;
     flex-direction: column;
@@ -225,6 +229,7 @@ html{
     } 
 }
 
+// Stilsetter brødsmulestiene på produktsiden og retursiden
 .breadcrumb_trail{
     ol{
         margin: 0 0 10px 0;
@@ -241,16 +246,21 @@ html{
     }
 }
 
+// Stilsetter informasjonen til produktet på produkt siden.
 #produktinfo_grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+
+    // Standard link for å lage sko, har klassen default_btn men har noen egen stilsetting
     a{
         grid-column: 1/2;
         grid-row: 1/2;
         width: fit-content;
         margin: 0 auto;
     }
+
+    // Taggene til produktet
     ul{
         grid-column: 1/2;
         grid-row: 2/3;
@@ -266,6 +276,8 @@ html{
             background-color: $contrast_green;
         }
     }
+
+    // Seksjon for tilgjengelige størrelser til produktet
     section{
         grid-column: 2/3;
         grid-row: 1/3;
@@ -289,6 +301,8 @@ html{
             }
             
         }
+
+        // Rangering av produkt element
         aside{
             display: flex;
             align-self: center;
@@ -310,6 +324,7 @@ html{
     }
 }
 
+// En sticky bar med generel sko info og mulighet til å trykke på skap sko.
 #product_info_bar{
     display: grid;
     grid-template-areas: "header header" "price ." "size btn";
@@ -338,6 +353,7 @@ html{
     }
 }
 
+// Stilsetting av produktinformasjon, vises kun på desktop foreløpig
 #produktspesifikasjon_info{
     ol{
         li{
@@ -367,6 +383,7 @@ html{
     }
 }
 
+// Main til retur siden
 #retur_main{
     section{
         border: none;
@@ -382,14 +399,17 @@ html{
     }
 }
 
+// Klasse som gjømmer elementer som skal vises på desktop og ikke mobil
 .hidden_mobile{
     display: none;
 }
 
+// Klasse som passer på at overlayen er skjult intill den skal vises
 .overlay{
     display: none;
 }
 
+// klasse for overlayen til hamburgermenyen
 .responsive{
     display: flex;
     flex-direction: column;
@@ -420,24 +440,33 @@ html{
     }
 }
 
+/* Breakpoint for desktop. har valgt 1000px da siden begynner å se rar ut på dette tidspunktet og man begynner å nærme seg veldig vanlige desktop størrelser
+    Ville lagt til en mellom break point vis jeg skulle jobbet videre med siden, for å gi en bedre opplevelse til tablet brukere*/
 @media only screen and (min-width: 1000px){
+
+    // Forandrer hovedgrid størrelsen
     #grid_container{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(6, auto);
     }
 
+    // Viser alle elementer som var skjult på mobil
     .hidden_mobile{
         display: block;
     }
+
+    // Skjuler noen elementer som ikke skal vises på desktop
     .hidden_desktop{
         display: none;
     }
 
+    // Plasserer headeren i griden
     header{
         grid-column: 1/4;
         grid-row: 1/2;
     }
 
+    // Utvider navigasjonsbaren med søkebar og trekker ut kategorier fra overlayen til hamburgermenyen fra mobil
     #main_nav{
         display: grid;
         grid-template-areas: ". . form search cart user"
@@ -495,6 +524,8 @@ html{
             }
         }
     }
+
+    //Forandrer på størrelsen på ikonene og teksten på top baren på siden
     #topp_bar_info{
         p, i{
             font-size: 1rem;
@@ -503,12 +534,15 @@ html{
 
     html{
         body{
+            // Plaserer main i gridet og lager ett eget grid for main
             main{
                 grid-column: 1/4;
                 grid-row: 2/3;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: repeat(3, auto);
+
+                // Generell stilsetting av seksjonene i main
                 section{
                     border: $default_border;
                     margin: 10px;
@@ -533,10 +567,14 @@ html{
                         font-size: 2rem;
                     }
                 }
+
+                // spesifikk plasering av promosjons seksjonen i main gridet
                 #promotion{
                     grid-column: 1/3;
                     grid-row: 1/2;
                 }
+
+                // Plasering av seksjonene for inspirasjon og hvordan benytte skoskaperen
                 #choice_btn{
                     grid-column: 1/3;
                     grid-row: 2/3;
@@ -559,6 +597,8 @@ html{
                     grid-row: 3/4;
                 }
             }
+
+            // Plasering og forandring på størrelse av info boxene
             #aside_info{
                 grid-column: 1/4;
                 grid-row: 5/6;
@@ -571,6 +611,8 @@ html{
                     }
                 }
             }
+
+            // Footeren får utvidet valg med flere kategorier, på mobil skal man kunne trykke på generelle kategorier for at de mer spesifikke skal droppe ned under
             footer{
                 grid-column: 1/4;
                 grid-row: 6/7;
@@ -630,9 +672,22 @@ html{
             }
         }
     }
+
+    // plassering av tilbakemelding seksjonene
     #main_review{
         grid-column: 2/3;
         grid-row: 3/4;
+        div{
+            margin-top: 38px;
+        }
+        p{
+            span{
+                font-weight: 600;
+            }
+        }
+        img{
+            margin-top: 15px;
+        }
     }
     #left_review{
         grid-column: 1/2;
@@ -647,7 +702,7 @@ html{
         grid-row: 4/5;
     }
     
-    
+    // Stilsetting av alle tilbakemelding seksjonene
     .customer_review{
         display: flex;
         flex-direction: column;
@@ -670,6 +725,8 @@ html{
             }  
         } 
     }
+
+    // Samling av stillsetting som skal kun gjelde for venstre og høyre tilbakemelding seksjon
     #left_review, #right_review{
         p{
             margin-top: 72px;
@@ -681,19 +738,8 @@ html{
             margin-top: 15px;
         }
     }
-    #main_review{
-        div{
-            margin-top: 38px;
-        }
-        p{
-            span{
-                font-weight: 600;
-            }
-        }
-        img{
-            margin-top: 15px;
-        }
-    }
+
+    // Plassering og størrelses endring brødsmulestiene
     .breadcrumb_trail{
         grid-column: 1/4;
         grid-row: 2/3;
@@ -705,6 +751,8 @@ html{
             }
         }
     }
+
+    // Stilsetting av produkt siden sin main
     #product_main{
         grid-column: 1/4;
         grid-row: 3/4;
@@ -734,6 +782,8 @@ html{
                 width: 180px;
             }
         }
+
+        // Stilsetting og plasering av hovedseksjonen for produktsiden
         #product_grid{
             display: grid;
             grid-template-areas: ". product_name" "product_img product_info";
@@ -791,18 +841,13 @@ html{
                     }    
                 }
             }
-        }
-        
+        } 
     }
+
+    // Lagredde design sekjson
     #saved_designs{
         grid-column: 1/4;
         grid-row: 4/5;
-    }
-    #product_info_bar{
-        grid-column: 1/4;
-        grid-row: 5/6;
-    }
-    #saved_designs{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 0.1fr 2fr 2fr;
@@ -815,6 +860,7 @@ html{
             color: $main_orange;
             @include default_heading;
         }
+        // Lagrede design kort
         article{
             background-color: gray;
             width: 100%;
@@ -829,7 +875,11 @@ html{
             }
         }
     }
+
+    // Sticky baren som følger brukeren med generell info om produktet
     #product_info_bar{
+        grid-column: 1/4;
+        grid-row: 5/6;
         grid-template-areas: "header ." "price ." "size btn";
         .default_btn{
             font-size: 2rem;
@@ -843,11 +893,15 @@ html{
             color: $main_orange;
         }
     }
+
+    // Plassering av main retursiden
     #retur_main{
         grid-row: 3/4;
         align-items: baseline;
     }
 }
+
+// BreakPoint for å passe på at det ikke blir noen overflow ved at størrelse seksjonen popper under taggene og lag din sko
 @media only screen and (max-width: 390px){
     #produktinfo_grid{
         display: flex;

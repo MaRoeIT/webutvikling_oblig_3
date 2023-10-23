@@ -1,3 +1,5 @@
+// Mixin biblotek
+// Standard bilde mixin
 @mixin default_image{
     width: 80%;
     max-width: 700px;
@@ -7,6 +9,7 @@
     margin-right: auto;
 }
 
+// Standard tekst mixin
 @mixin default_text{
     font-size: 1.5rem;
     text-align: center;
@@ -14,6 +17,7 @@
     margin: 0 15px;
 }
 
+// Standard link som skal se ut som knapp mixin
 @mixin default_button{
     display: inline-block;
     padding: 1rem;
@@ -27,6 +31,7 @@
     max-width: 300px;
 }
 
+// Standard overskrift mixin
 @mixin default_heading{
     font-size: 1.7rem;
     text-align: center;
