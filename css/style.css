@@ -370,7 +370,9 @@ html body footer ul li a {
 }
 #product_info_bar a {
   grid-area: size;
-  margin-left: 10px;
+  margin: 10px 10px 0 10px;
+  color: #FFFFFF;
+  font-size: 1.2rem;
 }
 #product_info_bar .default_btn {
   grid-area: btn;

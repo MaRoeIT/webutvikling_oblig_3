@@ -345,7 +345,9 @@ html{
     }
     a{
         grid-area: size;
-        margin-left: 10px;
+        margin: 10px 10px 0 10px;
+        color: $default_white;
+        font-size: 1.2rem;
     }
     .default_btn{
         grid-area: btn;
