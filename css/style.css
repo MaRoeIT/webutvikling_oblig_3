@@ -18,6 +18,7 @@ html body header nav {
 }
 html body header nav a {
   font-size: 1.7rem;
+  text-decoration: none;
 }
 html body header nav a i {
   size: 1rem;
@@ -82,6 +83,7 @@ html body #aside_info {
   padding: 20px 0;
 }
 html body #aside_info #return {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   grid-column: 2/3;
@@ -97,6 +99,7 @@ html body #aside_info #return i {
   font-size: 2rem;
 }
 html body #aside_info #delivery {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   grid-column: 3/4;
@@ -112,6 +115,7 @@ html body #aside_info #delivery i {
   font-size: 2rem;
 }
 html body #aside_info #payment {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   grid-column: 4/5;
@@ -144,6 +148,7 @@ html body footer ol li {
   margin: 30px 0;
 }
 html body footer ol li a {
+  text-decoration: none;
   color: #F07A22;
 }
 html body footer ul {
@@ -155,6 +160,7 @@ html body footer ul li {
   margin: 0 20px;
 }
 html body footer ul li a {
+  text-decoration: none;
   color: #F07A22;
   font-size: 1.8rem;
 }
@@ -194,7 +200,7 @@ html body footer ul li a {
 
 .default_btn {
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 3rem;
   background-color: #F07A22;
   color: #FFFFFF;
   border-radius: 15px;
@@ -203,6 +209,8 @@ html body footer ul li a {
   align-self: center;
   text-align: center;
   max-width: 300px;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 #choice_btn {
@@ -229,6 +237,7 @@ html body footer ul li a {
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #005F27;
+  margin: 20px;
 }
 .customer_review h3 {
   font-size: 1.7rem;
@@ -261,6 +270,7 @@ html body footer ul li a {
   padding: 0 10px;
 }
 .breadcrumb_trail ol li a {
+  text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -271,6 +281,7 @@ html body footer ul li a {
   grid-template-rows: auto auto;
 }
 #produktinfo_grid a {
+  text-decoration: none;
   grid-column: 1/2;
   grid-row: 1/2;
   width: fit-content;
@@ -287,7 +298,7 @@ html body footer ul li a {
 }
 #produktinfo_grid ul li {
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 3rem;
   background-color: #F07A22;
   color: #FFFFFF;
   border-radius: 15px;
@@ -296,6 +307,8 @@ html body footer ul li a {
   align-self: center;
   text-align: center;
   max-width: 300px;
+  text-decoration: none;
+  font-size: 1.5rem;
   margin: auto 10px;
   width: 7.7rem;
   background-color: #005F27;
@@ -369,6 +382,7 @@ html body footer ul li a {
   margin: 10px;
 }
 #product_info_bar a {
+  text-decoration: none;
   grid-area: size;
   margin: 10px 10px 0 10px;
   color: #FFFFFF;
@@ -376,7 +390,7 @@ html body footer ul li a {
 }
 #product_info_bar .default_btn {
   grid-area: btn;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 #produktspesifikasjon_info ol li {
@@ -436,6 +450,7 @@ html body footer ul li a {
   width: 230px;
 }
 .responsive li a {
+  text-decoration: none;
   float: right;
   color: #F07A22;
 }
@@ -522,6 +537,7 @@ html body footer ul li a {
     margin: 0 20px;
   }
   #main_nav ul li a {
+    text-decoration: none;
     color: #F07A22;
   }
   #topp_bar_info p, #topp_bar_info i {
@@ -639,6 +655,9 @@ html body footer ul li a {
   }
   html body footer #footer_about {
     grid-area: about;
+  }
+  html body footer #footer_about a {
+    text-decoration: none;
   }
   html body footer #footer_contact {
     grid-area: contact;

@@ -20,7 +20,7 @@
 // Standard link som skal se ut som knapp mixin
 @mixin default_button{
     display: inline-block;
-    padding: 1rem;
+    padding: 1rem 3rem;
     background-color: $main_orange;
     color: $default_white;
     border-radius: 15px;
@@ -29,6 +29,8 @@
     align-self: center;
     text-align: center;
     max-width: 300px;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 // Standard overskrift mixin
