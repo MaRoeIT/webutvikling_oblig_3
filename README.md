@@ -37,3 +37,16 @@ Til returside
 -Gjennom hamburgermeny overlay
 -info boxer
 
+### Div telling
+```html
+<div id="index_count">
+    <p>5 divs index.html</p>
+</div>
+<div id="produktside_count">
+    <p>4 divs produktside.html</p>
+</div>
+<div id="returside_count">
+    <p>2 divs returside.html</p>
+</div>
+```
+
