@@ -57,9 +57,12 @@ html body main section ol li {
   margin: 0 15px;
   list-style: none;
 }
+html body main #promotion .default_btn {
+  margin-bottom: 10px;
+}
 html body main img {
   width: 80%;
-  max-width: 500px;
+  max-width: 700px;
   max-height: 500px;
   display: block;
   margin-left: auto;
@@ -176,7 +179,7 @@ html body footer ul li a {
   padding: 0 1.5rem;
 }
 #topp_bar_info p {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   padding: 0 0.2rem;
 }
 #topp_bar_info i {
@@ -197,7 +200,7 @@ html body footer ul li a {
 
 .default_btn {
   display: inline-block;
-  padding: 0.7rem;
+  padding: 1rem;
   background-color: #F07A22;
   color: #FFFFFF;
   border-radius: 15px;
@@ -217,12 +220,12 @@ html body footer ul li a {
   flex-direction: row;
 }
 #choice_btn h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #FF9340;
 }
 #choice_btn h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #FF9340;
 }
@@ -294,7 +297,7 @@ html body footer ul li a {
 }
 #produktinfo_grid ul li {
   display: inline-block;
-  padding: 0.7rem;
+  padding: 1rem;
   background-color: #F07A22;
   color: #FFFFFF;
   border-radius: 15px;
@@ -422,6 +425,38 @@ html body footer ul li a {
 
 .hidden_mobile {
   display: none;
+}
+
+.overlay {
+  display: none;
+}
+
+.responsive {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 114px;
+  right: 0;
+  background-color: white;
+  padding: 20px;
+  list-style: none;
+  gap: 20px;
+  width: 230px;
+}
+.responsive li a {
+  float: right;
+  color: #F07A22;
+}
+.responsive li .green_text {
+  color: #005F27;
+}
+.responsive li i {
+  margin-top: 40px;
+  float: right;
+  border: 2px solid #005F27;
+  border-radius: 100%;
+  color: #005F27;
+  padding: 7px;
 }
 
 @media only screen and (min-width: 1000px) {

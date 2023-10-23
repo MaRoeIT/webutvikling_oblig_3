@@ -1,6 +1,6 @@
 @mixin default_image{
     width: 80%;
-    max-width: 500px;
+    max-width: 700px;
     max-height: 500px;
     display: block;
     margin-left: auto;
@@ -16,7 +16,7 @@
 
 @mixin default_button{
     display: inline-block;
-    padding: 0.7rem;
+    padding: 1rem;
     background-color: $main_orange;
     color: $default_white;
     border-radius: 15px;

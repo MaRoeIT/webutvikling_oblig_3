@@ -8,12 +8,13 @@
         <link href="img/ikoner/fontawsome_ikoner/css/brands.css" rel="stylesheet">
         <link href="img/ikoner/fontawsome_ikoner/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <title>My Sneaker Lab - skap din egen sko</title>
+        <title>My Sneaker Lab - Fly footstep</title>
     </head>
     <body>
         <div id="grid_container">
             <header>
-                <!-- Div for pynt over resten av navigasjonen, gir kort info om levering og åpent kjøp -->
+                <!-- Div som styler en topp bar med kort info om levering betaling og åpent kjøp
+                    vlagte div slik at opplesnings verktøy ikke leser denne opp først -->
                 <div id="topp_bar_info">
                     <i class="fa-solid fa-rotate-left"></i>
                     <p>
@@ -28,30 +29,62 @@
                         Betaling i vips eller klarna
                     </p>
                 </div>
-                <!-- Navigasjons taggen for navigasjonsbaren på siden -->
+                <!-- Hovednavigasjon for siden -->
                 <nav id="main_nav">
-                    <!-- Logoen til nettsiden, skal føre tilbake til index.html -->
+                    <!-- Logoen til nettsiden -->
                     <a href="index.html" id="logo">
                         <img src="img/logo.jpg" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
                     </a>
-                    <!-- Ikon for søkebar, skal få opp en overlay som man kan søke i -->
+                    <!-- Forstørrelsesglass ikon og søkebar -->
                     <form action="produktside.html" class="hidden_mobile">
                         <input type="search" name="searchbar" placeholder="søk her..." id="searchbar">
                     </form>
                     <a href="#" class="push_right" id="search_icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
-                    <!-- ikon for handlevognen, skal bringe opp handlevogn siden, og oppdateres med tall ettervert så handlevognen får varer -->
+                    <!-- Handlevogn ikon -->
                     <a href="#" id="cart_icon">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
-                    <!-- Hamburgermeny hovedmeny for mobil, skal få opp en overlay med valg på -->
-                    <a href="#" class="hidden_desktop">
+                    <!-- Hamburgermeny hovedmeny for mobil -->
+                    <a href="#" class="hidden_desktop" id="hamburger">
                         <i class="fa-solid fa-bars hidden_desktop"></i>
                     </a>
+                    <!-- Overlay som dukker opp når hamburgermenyen trykkes på -->
+                    <ul class="overlay hidden_desktop">
+                        <li>
+                            <a href="index.html">Hjem</a>
+                        </li>
+                        <li>
+                            <a href="produktside.html">Kvinne</a>
+                        </li>
+                        <li>
+                            <a href="produktside.html">Menn</a>
+                        </li>
+                        <li>
+                            <a href="produktside.html">Tilbud</a>
+                        </li>
+                        <li>
+                            <a href="#">Tips & triks</a>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-user"></i>   
+                        </li>
+                        <li>
+                            <a href="#" class="green_text">Logg inn</a>
+                        </li>
+                        <li>
+                            <a href="#" class="green_text">Lag profil</a>
+                        </li>
+                        <li>
+                            <a href="#" class="green_text">Lagrede design</a>
+                        </li>
+                    </ul>
+                    <!-- Bruker ikon for desktop -->
                     <a href="#" class="hidden_mobile" id="user_icon">
                         <i class="fa-regular fa-user"></i>
                     </a>
+                    <!-- Navigasjons valgene på desktop -->
                     <ul class="hidden_mobile">
                         <li>
                             <a href="produktside.html">Kvinner</a>
@@ -71,6 +104,7 @@
                     </ul>
                 </nav>
             </header>
+            <!-- Brødsmulesti -->
             <nav class="breadcrumb_trail">
                 <ol>
                     <li>
@@ -95,27 +129,33 @@
                     </li>
                 </ol>
             </nav>
+            <!-- Main med produkt og alt om produktet -->
             <main id="product_main">
+                <!-- Seksjon for hoved produkt info-->
                 <section id="product_grid">
+                    <!-- Bildene skal også kunne byttes ut ved å trykke på piler til venstre eller høyre.
+                        legger til vis tid -->
                     <div id="img_carousel">
                         <picture id="product_img_main">
                             <source media="(min-width: 1000px)" srcset="img/shoe_01_1.jpg">
                             <img src="img/shoe_01_1_square.jpg" alt="Bildekarusell av skoen fly footstep sneaker">
                         </picture>
+                        <!-- Bilder som man skal kunne trykke på og forandre det store bildet -->
                         <img src="img/shoe_01_2.jpg" alt="" id="product_img_left" class="hidden_mobile">
                         <img src="img/shoe_01_3.jpg" alt="" id="product_img_center" class="hidden_mobile">
                         <img src="img/shoe_01_1.jpg" alt="" id="product_img_right" class="hidden_mobile">
                     </div>
-                    <!-- ordne en bildekarusell av produktet -->
+                    <!-- Navnet til produktet -->
                     <h1>
                         Fly Footstep Sneaker
                     </h1>
+                    <!-- Grid for posisjonering av info rundt produktet -->
                     <div id="produktinfo_grid">
                         <a href="#" class="default_btn">
                             Start å lag din sko
                         </a>
-                        <!-- taggene til produktet -->
                         <p class="hidden_mobile">Fra 690 kr</p>
+                        <!-- Tagger som forteller gennerelle egenskaper ved skoene -->
                         <ul>
                             <li>
                                 Tagg
@@ -127,7 +167,7 @@
                                 Tagg
                             </li>
                         </ul>
-                        <!-- dette blir hele størrelses seksjonen -->
+                        <!-- Seksjon med alle størrelsene til skoen -->
                         <section id="size_grid">
                             <h2>
                                 Størrelser
@@ -161,6 +201,7 @@
                                     44
                                 </li>
                             </ol>
+                            <!-- Stjerner for hvor høyt andre brukere rangerer produktet -->
                             <aside>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -172,9 +213,9 @@
                                 </p>
                             </aside>
                         </section>
-                        
                     </div>              
                 </section>
+                <!-- Seksjon for produktspesifikasjoner, skal kunne åpnes ved å trykke på titelen til seksjonen og lukkes -->
                 <section>
                     <h3>
                         produktspesifikasjoner
@@ -201,6 +242,7 @@
                     </section>
                 </section>
             </main>
+            <!-- Ruter som viser tidligere lagrede design, tilgjengelig på desktop. skal være tilgjengelig gjennom hamburger menyen og -->
             <section class="hidden_mobile" id="saved_designs">
                 <a href="#">Dine design</a>
                 <article>
@@ -222,6 +264,7 @@
                     <p>Lagret design 6</p>
                 </article>
             </section>
+            <!-- En bar som følger brukeren gjennom nettsiden med knapp for å starte å designe skoen -->
             <section id="product_info_bar">
                 <h2>
                     Fly Footstep sneakers
@@ -237,6 +280,7 @@
                 </a>
             </section>
             <footer>
+                <!-- Første elementene tilgjengelig på mobil og ikke desktop -->
                 <h3 class="hidden_desktop">
                     Hjelp
                 </h3>
@@ -275,6 +319,7 @@
                         </a> 
                     </li>
                 </ol>
+                <!-- Delene under her er kategoriene i footeren for desktop -->
                 <section class="hidden_mobile" id="footer_how_to">
                     <h4>Skoskaperen</h4>
                     <ul>
@@ -314,6 +359,7 @@
                 <a href="index.html" class="hidden_mobile" id="footer_logo">
                     <img src="img/logo_green.jpg" alt="Logoen til my sneaker lab, en sneaker sko med sterke farger">
                 </a>
+                <!-- Sosiale medier ikoner, nederst på siden -->
                 <ul>
                     <li>
                         <a href="#">
@@ -338,5 +384,22 @@
                 </ul>
             </footer>
         </div>
+        <!-- Java script -->
+        <script>
+            // Denne er kopiert for så redigert fra WEBUTVIKLING2023 github repositoryet laget av Ann-Charlott Beatrice Karlsen
+            // Lager en variabel som holder overlay classe elementene i html dokumentet
+            let overlay = document.querySelector(".overlay")
+            // Legger til en lytter som sjekker om elementet med id hamburger har blitt trykket på
+            document.getElementById("hamburger").addEventListener("click", (e) => {
+                // Sjekker om overlay variabelen har kun classene overlay og hidden_desktop tilknyttet seg.
+                if (overlay.className === "overlay hidden_desktop") {
+                    // Legger til klassen responsive vis if statmenten er sann
+                    overlay.className += " responsive";
+                } else {
+                    // Hvis klassene til overlay ikke er kun overlay og hidden_desktop så setter den klassene til overlay til overlay og hidden desktop.
+                    overlay.className = "overlay hidden_desktop"
+                }
+            })
+        </script>
     </body>
 </html>
